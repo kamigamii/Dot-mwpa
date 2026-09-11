@@ -1,0 +1,23 @@
+[config]
+palette_type = "tonal_spot"
+contrast = 0.2
+mode = "dark"
+
+[templates.hyprland]
+input_path = '~/.config/matugen/templates/theme_colors.lua'
+output_path = '~/.config/hypr/theme_colors.lua'
+
+[templates.kitty]
+input_path = '~/.config/matugen/templates/kitty.conf'
+output_path = '~/.config/kitty/theme_colors.conf'
+
+[templates.waybar]
+input_path = '~/.config/matugen/templates/waybar_colors.css'
+output_path = '~/.config/waybar/tokens/colors.css'
+post_hook = 'pkill -SIGUSR2 waybar'
+
+
+[templates.cava]
+input_path = '~/.config/matugen/templates/cava.conf'
+output_path = '~/.config/cava/themes/matugen-colors'
+post_hook = 'pkill -USR1 cava'

@@ -1,0 +1,65 @@
+/* Base window with 0.65 opacity background matching Kitty */
+window {
+    margin: 0px;
+    background-color: rgba(30, 30, 46, 0.65); /* #1e1e2e at 65% opacity */
+    border: 2px solid #89b4fa;               /* Blue accent border */
+    border-radius: 12px;
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 14px;
+}
+
+/* Container padding equivalent to window_padding_width 15 */
+#outer-box {
+    margin: 15px;
+    border: none;
+    background-color: transparent;
+}
+
+/* Search input field */
+#input {
+    margin: 0px 0px 15px 0px;
+    padding: 10px 15px;
+    border: 1px solid #45475a;               /* color0 / Surface1 */
+    border-radius: 8px;
+    color: #cdd6f4;                          /* Foreground */
+    background-color: rgba(69, 71, 90, 0.5);  /* Surface color with low opacity */
+}
+
+#input:focus {
+    border: 1px solid #89b4fa;               /* Blue accent highlight */
+}
+
+/* Results container */
+#scroll {
+    margin: 0px;
+    border: none;
+}
+
+#text {
+    margin: 5px;
+    border: none;
+    color: #cdd6f4;                          /* Foreground */
+}
+
+/* Normal entry items */
+#entry {
+    padding: 8px 12px;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+/* Selected item matching Kitty selection */
+#entry:selected {
+    background-color: #585b70;              /* selection_background */
+    border-radius: 8px;
+}
+
+#entry:selected #text {
+    color: #cdd6f4;                          /* selection_foreground */
+    font-weight: bold;
+}
+
+/* App Icons */
+#img {
+    margin-right: 12px;
+}

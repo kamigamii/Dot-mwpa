@@ -1,0 +1,4 @@
+@define-color matugen-accent {{colors.primary.default.hex}};
+@define-color matugen-surface rgba({{colors.surface.default.red}}, {{colors.surface.default.green}}, {{colors.surface.default.blue}}, 0.65);
+@define-color matugen-surface-border {{colors.surface_bright.default.hex}};
+@define-color matugen-text {{colors.on_surface.default.hex}};

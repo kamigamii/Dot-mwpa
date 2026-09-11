@@ -1,0 +1,66 @@
+configuration {
+    show-icons: true;
+    matching: "fuzzy";
+}
+
+* {
+    bg-window:      rgba(30, 30, 46, 0.65);
+    border-blue:    #89b4fa;
+    border-surface: #45475a;
+    bg-selected:    rgba(88, 91, 112, 0.4);
+}
+
+window {
+    width:            1100px; /* Slightly wider window for cleaner spacing */       
+    height:           460px; 
+    location:         center;
+    anchor:           center;
+    background-color: @bg-window;
+    border:           2px;
+    border-color:     @border-blue;
+    border-radius:    12px;
+}
+
+mainbox {
+    background-color: transparent;
+    padding:          30px;
+    children:         [ listview ]; 
+}
+
+listview {
+    background-color: transparent;
+    border:           0px;
+    spacing:          30px;         
+    columns:          3; 
+    lines:            2;
+    cycle:            true;
+    fixed-columns:    true;
+}
+
+element {
+    background-color: transparent;  
+    padding:          0px;
+    border-radius:    12px;
+    border:           2px;
+    border-color:     transparent;
+    children:         [ element-icon ]; 
+}
+
+element normal.normal,
+element alternate.normal {
+    background-color: transparent;
+    border-color:     transparent;
+}
+
+element-icon {
+    background-color: transparent;
+    /* Tells Rofi to let the image naturally scale down to fill the column width cleanly */
+    size:             340px;       
+    horizontal-align: 0.5;
+    vertical-align:   0.5;
+}
+
+element selected.normal {
+    background-color: @bg-selected;
+    border-color:     @border-blue; 
+}
